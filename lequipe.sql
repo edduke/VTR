@@ -6,7 +6,7 @@ SAFE_DIVIDE(sum(view.time_watched) , sum(video.duration)) * 100  as VTR ,
 EXTRACT (DATE FROM inventory.request_timestamp) AS date,
 EXTRACT (HOUR from video.upload_timestamp) as hour,
 visitor.device_type
-FROM `dailymotion-bidata.inventory.agnostic_fast`
+FROM inventory.agnostic_fast`
 WHERE partition_name 
 BETWEEN '2018-01-01' AND '2018-12-31'
 AND (video.owner.parent.id = 36289835
